@@ -1,3 +1,11 @@
+import { AboutusSection, Categories, HeroSection } from "@/components/sections";
+
 export default function Home() {
-  return <h1>Uzbek Women Rise</h1>;
+  return (
+    <div className="flex flex-col">
+      <HeroSection />
+      <AboutusSection />
+      <Categories />
+    </div>
+  );
 }

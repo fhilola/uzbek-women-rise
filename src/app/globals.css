@@ -119,4 +119,16 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1 {
+    @apply text-3xl font-semibold md:text-4xl lg:text-3xl;
+  }
+  h2 {
+    @apply text-4xl font-bold md:text-5xl lg:text-6xl;
+  }
+  h3 {
+    @apply text-2xl font-bold md:text-3xl lg:text-4xl;
+  }
+  p {
+    @apply text-lg font-medium md:text-xl lg:text-lg;
+  }
 }

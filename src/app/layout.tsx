@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { Footer, Header } from "@/components/layouts";
 import "./globals.css";
-import { Footer, Header } from "../components/layouts";
 
 const roboto = Roboto({
   variable: "--font-geist-sans",
@@ -14,11 +14,12 @@ export const metadata: Metadata = {
     "An educational platform empowering Uzbek women through free courses, workshops, and resources in programming, marketing, design, SMM, and English.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
   return (
     <html lang="en">
       <body className={`${roboto.variable} antialiased`}>
